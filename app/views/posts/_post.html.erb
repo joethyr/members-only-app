@@ -9,4 +9,10 @@
     <%= post.body %>
   </p>
 
+  <% if user_signed_in? %>
+    <p>
+      <strong>Author:</strong>
+      <%= User.find(post.user_id).username %>
+    </p>
+  <% end %>
 </div>
