@@ -1,2 +1,21 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>Create a Post</h1>
+
+<%= form_with model: @post do |form| %>
+  <div class="field form-group">
+    <%= form.label :title, "Title:" %>
+    <%= form.text_field :title,  class: "form-control" %>
+  </div>
+
+  <div class = "field form-group">
+    <%= form.label :body, "Body:" %>
+    <%= form.text_area :body, class: "form-control", size: "60x10" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :post_user_id, class: "form-control", value: current_user.id, type: :hidden %>
+  </div>
+
+  <div class = "actions">
+    <%= form.submit  class: 'btn btn-secondary' %>
+  </div>
+<% end %>
