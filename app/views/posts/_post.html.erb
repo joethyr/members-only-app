@@ -1,4 +1,4 @@
-<div id="<%= dom_id post %>">
+<!-- <div>
   <p>
     <strong>Title:</strong>
     <%= post.title %>
@@ -14,5 +14,24 @@
       <strong>Author:</strong>
       <%= User.find(post.user_id).username %>
     </p>
+    <% else %>
+      <p>anonymous</p>
   <% end %>
+</div>
+
+
+ --><div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= post.title %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      <% if user_signed_in? %>
+        <p>
+          <%= User.find(post.user_id).username %>
+        </p>
+        <% else %>
+          <p>anonymous</p>
+      <% end %>
+    </h6>
+    <p class="card-text"><%= post.body %></p>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 <%= render @post %>
 
 <div>
-  <%= link_to "Back to posts", posts_path %>
+  <%= link_to "Back to posts", posts_path, class: "btn btn-light" %>
   <%= button_to "Destroy this post", @post, method: :delete %>
 </div>
