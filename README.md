@@ -1,6 +1,6 @@
 # Project:Members Only App
 
-Build a project that implements authentication systems so users can only access areas of a site they are authorized to.
+A project that implements authentication systems so users can only access areas of a site they are authorized to.
 
 ## Description
 
