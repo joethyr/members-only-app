@@ -1,4 +1,4 @@
-# Project:Members Only App
+# Project: Members Only App
 
 A project that implements authentication systems so users can only access areas of a site they are authorized to.
 
